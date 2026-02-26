@@ -1,0 +1,29 @@
+# PaySika Job Application Email
+
+**Recipient:** jobs@paysika.co
+**Subject:** Application for Senior Backend Engineer (Flask) - Laurent Joel MKOUNGA TATCHUM
+
+---
+
+Dear PaySika Recruitment Team,
+
+I am writing to express my enthusiastic interest in the **Senior Backend Engineer (Flask)** position at PaySika, as advertised. 
+
+As a Full Stack Developer with a strong focus on backend infrastructure, I have extensive experience in building scalable **RESTful APIs**, designing robust **PostgreSQL** database schemas, and managing containerized deployments using **Docker** and **CI/CD** pipelines. My work at CENADI, particularly on high-traffic institutional systems and ERP integrations, has equipped me with the technical rigor and problem-solving mindset necessary for the high-performance fintech environment at PaySika.
+
+I am deeply motivated by PaySika’s mission to foster financial inclusion in Central Africa. I would be honored to leverage my expertise in Python, software design, and real-time systems to contribute to your pioneering efforts in the region.
+
+Please find attached my **CV** and a **detailed Cover Letter** (formatted for print) that further outlines my technical background and my alignment with PaySika's values.
+
+I look forward to the opportunity to discuss how my skills and experience can support PaySika’s continued growth and innovation.
+
+Thank you for your time and consideration.
+
+Best regards,
+
+**Laurent Joel MKOUNGA TATCHUM**
+Yaoundé, Cameroon
+Tel: +237 679 147 059
+LinkedIn: [linkedin.com/in/laurent-joël-mkounga-tatchum](https://linkedin.com/in/laurent-joël-mkounga-tatchum-76548b291)
+GitHub: [github.com/LaurentJoel](https://github.com/LaurentJoel)
+Portfolio: [portfolio-joel1.vercel.app](https://portfolio-joel1.vercel.app)
