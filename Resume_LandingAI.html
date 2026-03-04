@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume – Software Engineer – Laurent Joel MKOUNGA TATCHUM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm 15mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            line-height: 1.45;
+            color: #000;
+            background: #e0e0e0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 20px 30px;
+            background: #fff;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* HEADER */
+        .header {
+            margin-bottom: 5px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .header-left .job-title {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .header-left a {
+            font-size: 10.5px;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 10.5px;
+            line-height: 1.5;
+        }
+
+        /* SECTION DIVIDERS */
+        .section-divider {
+            border: none;
+            border-top: 1.5px solid #000;
+            margin: 8px 0 6px 0;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        /* EDUCATION */
+        .edu-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 3px;
+        }
+
+        .edu-left {
+            flex: 1;
+        }
+
+        .edu-school {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .edu-detail {
+            font-size: 10.5px;
+            color: #333;
+        }
+
+        .edu-right {
+            text-align: right;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .edu-location {
+            font-size: 10.5px;
+            color: #333;
+        }
+
+        .edu-date {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* SKILLS */
+        .skills-list {
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 10.5px;
+        }
+
+        .skills-list li {
+            margin-bottom: 2px;
+        }
+
+        .skills-list strong {
+            display: inline-block;
+            width: 120px;
+        }
+
+        /* EXPERIENCE */
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .exp-date {
+            font-weight: 700;
+            font-size: 10.5px;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .exp-subtitle {
+            font-size: 10.5px;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .exp-list {
+            list-style: circle;
+            padding-left: 25px;
+            font-size: 10.5px;
+            color: #000;
+        }
+
+        .exp-list li {
+            margin-bottom: 1px;
+        }
+
+        .exp-entry {
+            margin-bottom: 10px;
+        }
+
+        /* PROJECTS */
+        .proj-entry {
+            margin-bottom: 8px;
+        }
+
+        .proj-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .proj-title {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .proj-title a {
+            font-weight: 400;
+            font-size: 10.5px;
+        }
+
+        .proj-date {
+            font-weight: 700;
+            font-size: 10.5px;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .proj-list {
+            list-style: circle;
+            padding-left: 25px;
+            font-size: 10.5px;
+            color: #000;
+        }
+
+        .proj-list li {
+            margin-bottom: 1px;
+        }
+
+        /* PRINT */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .print-btn:hover {
+            background: #111;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .resume {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .print-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-download"></i> Download PDF
+    </button>
+
+    <div class="resume">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-top">
+                <div class="header-left">
+                    <h1>Laurent Joel MKOUNGA TATCHUM</h1>
+                    <span class="job-title">Software Engineer | Python &middot; AI Integration &middot; Backend &amp; Full Stack</span>
+                    <a href="https://linkedin.com/in/laurent-joël-mkounga-tatchum-76548b291"
+                        target="_blank">linkedin.com/in/laurent-jo&euml;l-mkounga-tatchum</a>
+                    <a href="https://github.com/LaurentJoel" target="_blank">github.com/LaurentJoel</a>
+                    <a href="https://portfolio-joel1.vercel.app" target="_blank">portfolio-joel1.vercel.app</a>
+                </div>
+                <div class="header-right">
+                    Email: <a href="mailto:laurentjoel52@gmail.com">laurentjoel52@gmail.com</a><br>
+                    Mobile: <a href="tel:+237679147059">+237 679 147 059</a><br>
+                    Location: Yaound&eacute;, Cameroon (GMT+1)<br>
+                    <em>Flexible hours for global team collaboration</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <hr class="section-divider">
+        <div class="section-title">Professional Summary</div>
+        <p style="font-size: 10.5px; text-align: justify; margin-bottom: 4px;">
+            Software Engineer with 4 years of experience building and deploying production web applications,
+            REST APIs, and AI-integrated systems. Currently owning the full software development lifecycle&mdash;design,
+            implementation, testing, deployment, and maintenance&mdash;for applications serving real users at a
+            government IT center. Strong <strong>Python</strong> skills for backend development, scripting, and
+            AI/LLM integration. Experienced with <strong>Docker, CI/CD pipelines, PostgreSQL</strong>, and
+            cross-functional collaboration. Certified in <strong>LandingAI&rsquo;s Agentic Document Extraction</strong>
+            technology. Passionate about building scalable, reliable software that brings ML/AI capabilities to end users.
+            Bilingual (French &amp; English), remote-ready with flexible hours for global teams.
+        </p>
+
+        <!-- TECHNICAL SKILLS -->
+        <hr class="section-divider">
+        <div class="section-title">Technical Skills</div>
+
+        <ul class="skills-list">
+            <li><strong>Languages:</strong> Python (primary), JavaScript/TypeScript, SQL, HTML5, CSS3, Dart</li>
+            <li><strong>Backend &amp; APIs:</strong> Node.js (Express, Nest.js), REST API Design, MVC Architecture, ERP &amp; External Service Integration</li>
+            <li><strong>Frontend:</strong> React (Hooks, Context, Redux), Next.js, Tailwind CSS, Responsive Design</li>
+            <li><strong>AI &amp; LLMs:</strong> Agentic AI, Generative AI, LLM Integration, AI Agent Development, Document AI (OCR &amp; Agentic Extraction)</li>
+            <li><strong>AI Coding Tools:</strong> Claude Code, GitHub Copilot, LLM-assisted pair programming</li>
+            <li><strong>Databases:</strong> PostgreSQL (advanced &mdash; schema design, query optimization, ORMs), MongoDB, Redis, Firebase, SQLite</li>
+            <li><strong>DevOps &amp; Cloud:</strong> Docker, CI/CD (GitHub Actions), Nginx, Linux Administration, Containerized Deployments</li>
+            <li><strong>Testing &amp; Quality:</strong> Automated Testing, API Testing, Code Reviews, Observability &amp; Monitoring</li>
+            <li><strong>Methodologies:</strong> Agile/SCRUM, Full SDLC Ownership, Cross-Functional Collaboration, Technical Documentation</li>
+        </ul>
+
+        <!-- WORK EXPERIENCE -->
+        <hr class="section-divider">
+        <div class="section-title">Professional Experience</div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <div class="exp-title">Software Engineer (Full Stack) | CENADI &mdash; National IT Development Center</div>
+                <div class="exp-date">June 2025 &ndash; Present</div>
+            </div>
+            <div class="exp-subtitle">Government institution responsible for national IT infrastructure &mdash; Yaound&eacute;, Cameroon</div>
+            <ul class="exp-list">
+                <li><strong>Full SDLC ownership:</strong> Designed, implemented, tested, deployed, monitored, and maintained production web applications and backend services end-to-end with high accountability.</li>
+                <li><strong>Backend &amp; API development:</strong> Built robust, low-latency RESTful APIs (Node.js/Express) handling core data processing, business logic, and integration with external services and legacy ERP systems.</li>
+                <li><strong>AI integration:</strong> Integrated AI/ML capabilities into software products, including AI-powered features in a mobile app (image analysis, intelligent recommendations) &mdash; bridging ML models with user-facing applications.</li>
+                <li><strong>Python automation:</strong> Developed Python scripts and tooling for data processing workflows, backups, operational automation, and ETL-style data pipelines.</li>
+                <li><strong>Database engineering:</strong> Designed PostgreSQL schemas, wrote optimized queries, managed indexes and performance tuning for production databases.</li>
+                <li><strong>Containerization &amp; CI/CD:</strong> Automated build, test, and deployment pipelines using Docker and GitHub Actions, achieving zero-downtime production releases.</li>
+                <li><strong>Mobile product delivery:</strong> Developed cross-platform mobile applications with React Native, managing full lifecycle through Play Store publication.</li>
+                <li><strong>Cross-functional collaboration:</strong> Worked directly with stakeholders, translated business requirements into robust software solutions, and produced comprehensive technical documentation.</li>
+            </ul>
+        </div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <div class="exp-title">Software Engineer Intern | CENADI</div>
+                <div class="exp-date">June 2024 &ndash; August 2024</div>
+            </div>
+            <ul class="exp-list">
+                <li>Developed backend features and frontend components for the institutional web portal, integrating third-party APIs and services.</li>
+                <li>Optimized PostgreSQL and MongoDB database queries for improved application performance and lower latency.</li>
+                <li>Participated in requirements gathering and translated business needs into actionable engineering tasks.</li>
+            </ul>
+        </div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <div class="exp-title">Junior Software Engineer Intern | Octal Groupe</div>
+                <div class="exp-date">June 2023 &ndash; August 2023</div>
+            </div>
+            <ul class="exp-list">
+                <li>Built software features for client-facing web and mobile applications with measurable business impact.</li>
+                <li>Adopted professional engineering workflows: Git version control, code reviews, and Agile/SCRUM methodology.</li>
+            </ul>
+        </div>
+
+        <!-- KEY PROJECTS -->
+        <hr class="section-divider">
+        <div class="section-title">Key Projects &amp; Products <span
+                style="font-weight: 400; font-size: 9.5px; text-transform: none; letter-spacing: 0;">&mdash; More on
+                <a href="https://portfolio-joel1.vercel.app" target="_blank"
+                    style="color: #000; text-decoration: underline;">my portfolio</a></span></div>
+
+        <div class="proj-entry">
+            <div class="proj-header">
+                <div class="proj-title">CENADI Institutional Platform &mdash; Production Web Application | <a
+                        href="https://www.cenadi.cm/en/home" target="_blank">LIVE</a></div>
+                <div class="proj-date">2025</div>
+            </div>
+            <ul class="proj-list">
+                <li>Full-stack production app serving real daily traffic: React frontend + Node.js/Express backend + PostgreSQL. Owned design through deployment and monitoring.</li>
+                <li>Built scalable REST APIs, managed database architecture, integrated external services, deployed via Docker/CI/CD with high reliability.</li>
+            </ul>
+        </div>
+
+        <div class="proj-entry">
+            <div class="proj-header">
+                <div class="proj-title">Smart Farmer &mdash; AI-Integrated Mobile Application | <a
+                        href="https://github.com/LaurentJoel/YCDPlantApp" target="_blank">CODE</a></div>
+                <div class="proj-date">2024 &ndash; 2025</div>
+            </div>
+            <ul class="proj-list">
+                <li>End-to-end product integrating AI/ML capabilities into a user-facing mobile app: React Native + Node.js/Express API + AI inference features.</li>
+                <li>Hybrid storage (Firebase/PostgreSQL), JWT authentication, real-time data sync, published to Play Store.</li>
+            </ul>
+        </div>
+
+        <div class="proj-entry">
+            <div class="proj-header">
+                <div class="proj-title">University Management System &mdash; Full-Stack Web App | <a
+                        href="https://github.com/LaurentJoel/ProjetCompletNiveau3" target="_blank">CODE</a></div>
+                <div class="proj-date">2024</div>
+            </div>
+            <ul class="proj-list">
+                <li>React + Node.js/Express + PostgreSQL with role-based access control, RESTful APIs, JWT auth, and automated testing.</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <hr class="section-divider">
+        <div class="section-title">Education</div>
+
+        <div class="edu-entry">
+            <div class="edu-left">
+                <div class="edu-school">Universit&eacute; Saint Jean-Paul II, Yaound&eacute;</div>
+                <div class="edu-detail">Bachelor&rsquo;s Degree in Computer Science / Software Engineering</div>
+            </div>
+            <div class="edu-right">
+                <div class="edu-location">Yaound&eacute;, Cameroon</div>
+                <div class="edu-date">June 2022 &ndash; June 2025</div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <hr class="section-divider">
+        <div class="section-title">Certifications</div>
+        <ul class="skills-list">
+            <li><strong style="width: auto;">Document AI: From OCR to Agentic Doc Extraction</strong> &mdash; <a
+                    href="https://learn.deeplearning.ai/accomplishments/e9e9632b-4a97-4f5b-9a14-80d0614ed29c?usp=sharing"
+                    target="_blank"><strong>LandingAI</strong> / DeepLearning.AI</a> | Feb 2026</li>
+            <li><strong style="width: auto;">Agentic AI</strong> &mdash; <a
+                    href="https://learn.deeplearning.ai/certificates/6299e2ca-21c6-4a3c-b22c-72dab5e45dfc?usp=sharing"
+                    target="_blank">DeepLearning.AI</a> | Feb 2026</li>
+            <li><strong style="width: auto;">Generative AI for Everyone</strong> &mdash; <a
+                    href="https://learn.deeplearning.ai/certificates/4ec72627-00f4-40ea-bd40-17db8412c376?usp=sharing"
+                    target="_blank">DeepLearning.AI</a> | Feb 2026</li>
+            <li><strong style="width: auto;">Pair Programming with Large Language Models</strong> &mdash; <a
+                    href="https://learn.deeplearning.ai/accomplishments/8794fb9b-23b7-4b93-b74b-2478c736cb3c?usp=sharing"
+                    target="_blank">Google / DeepLearning.AI</a> | Feb 2026</li>
+        </ul>
+
+        <!-- LANGUAGES -->
+        <hr class="section-divider">
+        <div class="section-title">Languages</div>
+        <ul class="skills-list" style="display: flex; list-style: none; justify-content: center; gap: 40px;">
+            <li><strong>French:</strong> Native / Fluent</li>
+            <li><strong>English:</strong> Professional Working Proficiency (Bilingual)</li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
