@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Email de Candidature – KES Inspections &amp; Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 25mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 12px;
+      line-height: 1.7;
+      color: #000;
+      background: #e0e0e0;
+    }
+    .email-container {
+      width: 210mm;
+      margin: 20px auto;
+      padding: 40px 50px;
+      background: #fff;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+    }
+    .field {
+      margin-bottom: 8px;
+    }
+    .field-label {
+      font-weight: 700;
+      color: #333;
+      display: inline-block;
+      width: 120px;
+    }
+    .field-value {
+      color: #000;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+    .body-text {
+      text-align: justify;
+      margin-bottom: 12px;
+    }
+    .signature {
+      margin-top: 25px;
+      line-height: 1.6;
+    }
+    .note {
+      margin-top: 30px;
+      padding: 15px;
+      background: #f5f5f5;
+      border-left: 4px solid #333;
+      font-size: 11px;
+      color: #555;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    .print-btn:hover {
+      background: #111;
+    }
+    @media print {
+      body { background: #fff; }
+      .email-container { box-shadow: none; margin: 0; padding: 20px; width: 100%; }
+      .print-btn { display: none !important; }
+      .note { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-btn" onclick="window.print()">
+    &#11015; Imprimer
+  </button>
+
+  <div class="email-container">
+
+    <h2 style="margin-bottom: 20px; font-size: 16px; color: #333;">Email de Candidature</h2>
+
+    <div class="field">
+      <span class="field-label">À :</span>
+      <span class="field-value">contact.cmr@kes-africa.com</span>
+    </div>
+
+    <div class="field">
+      <span class="field-label">Objet :</span>
+      <span class="field-value"><strong>Recrutement Développeur Full Stack (Web &amp; Mobile)</strong></span>
+    </div>
+
+    <div class="field">
+      <span class="field-label">Pièces jointes :</span>
+      <span class="field-value">CV_Laurent_Joel_MKOUNGA_TATCHUM.pdf, Lettre_Motivation_KES.pdf</span>
+    </div>
+
+    <hr class="divider">
+
+    <p class="body-text">
+      Madame, Monsieur,
+    </p>
+
+    <p class="body-text">
+      Je me permets de vous adresser ma candidature pour le poste de <strong>Développeur Full Stack (Web &amp; Mobile)</strong>
+      basé à Douala, tel que publié sur vos canaux de recrutement.
+    </p>
+
+    <p class="body-text">
+      Développeur Full Stack avec 4 ans d'expérience, je maîtrise les technologies mentionnées dans votre offre :
+      <strong>React.js, Vue.js</strong> (front-end), <strong>Django, Python</strong> (back-end), <strong>Flutter</strong> (mobile iOS/Android),
+      ainsi que <strong>PostgreSQL, MySQL et MongoDB</strong> pour les bases de données. Actuellement en poste au CENADI
+      (Centre National de Développement de l'Informatique), je suis responsable du développement complet d'applications
+      web et mobiles en production, de la conception d'API RESTful, de l'intégration de services tiers, et du déploiement
+      via Docker et CI/CD.
+    </p>
+
+    <p class="body-text">
+      Vous trouverez en pièces jointes mon <strong>CV</strong> et ma <strong>lettre de motivation</strong> détaillant
+      mon parcours et mes réalisations. Je suis immédiatement disponible et mobile sur Douala.
+    </p>
+
+    <p class="body-text">
+      Je reste à votre entière disposition pour un entretien à votre convenance.
+    </p>
+
+    <p class="body-text">
+      Cordialement,
+    </p>
+
+    <div class="signature">
+      <strong>Laurent Joel MKOUNGA TATCHUM</strong><br>
+      Tél : +237 679 147 059<br>
+      Email : laurentjoel52@gmail.com<br>
+      LinkedIn : <a href="https://linkedin.com/in/laurent-joël-mkounga-tatchum-76548b291">linkedin.com/in/laurent-joël-mkounga-tatchum</a><br>
+      Portfolio : <a href="https://portfolio-joel1.vercel.app">portfolio-joel1.vercel.app</a><br>
+      GitHub : <a href="https://github.com/LaurentJoel">github.com/LaurentJoel</a>
+    </div>
+
+    <div class="note">
+      <strong>Rappel :</strong> Envoyer cet email avant le <strong>15 mars 2026</strong>.
+      Joindre le CV et la lettre de motivation en format PDF.
+      L'objet du mail doit être exactement : <strong>Recrutement Développeur Full Stack (Web &amp; Mobile)</strong>
+    </div>
+
+  </div>
+
+</body>
+</html>
