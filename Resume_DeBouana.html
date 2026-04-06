@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV – Développeur d'Applications Mobiles – Laurent Joel MKOUNGA TATCHUM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm 15mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            line-height: 1.45;
+            color: #000;
+            background: #e0e0e0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 20px 30px;
+            background: #fff;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .header {
+            margin-bottom: 5px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .header-left .job-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .header-left a {
+            font-size: 10.5px;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 10.5px;
+            line-height: 1.5;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1.5px solid #000;
+            margin: 8px 0 6px 0;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .edu-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 3px;
+        }
+
+        .edu-left {
+            flex: 1;
+        }
+
+        .edu-school {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .edu-detail {
+            font-size: 10.5px;
+            color: #333;
+        }
+
+        .edu-right {
+            text-align: right;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .edu-location {
+            font-size: 10.5px;
+            color: #333;
+        }
+
+        .edu-date {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .skills-list {
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 10.5px;
+        }
+
+        .skills-list li {
+            margin-bottom: 2px;
+        }
+
+        .skills-list strong {
+            display: inline-block;
+            width: 130px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .exp-date {
+            font-weight: 700;
+            font-size: 10.5px;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .exp-subtitle {
+            font-size: 10.5px;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .exp-list {
+            list-style: circle;
+            padding-left: 25px;
+            font-size: 10.5px;
+            color: #000;
+        }
+
+        .exp-list li {
+            margin-bottom: 1px;
+        }
+
+        .exp-entry {
+            margin-bottom: 10px;
+        }
+
+        .proj-entry {
+            margin-bottom: 8px;
+        }
+
+        .proj-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .proj-title {
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .proj-title a {
+            font-weight: 400;
+            font-size: 10.5px;
+        }
+
+        .proj-date {
+            font-weight: 700;
+            font-size: 10.5px;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .proj-list {
+            list-style: circle;
+            padding-left: 25px;
+            font-size: 10.5px;
+            color: #000;
+        }
+
+        .proj-list li {
+            margin-bottom: 1px;
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .print-btn:hover {
+            background: #111;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .resume {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .print-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-download"></i> T&eacute;l&eacute;charger PDF
+    </button>
+
+    <div class="resume">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-top">
+                <div class="header-left">
+                    <h1>Laurent Joel MKOUNGA TATCHUM</h1>
+                    <span class="job-title">D&eacute;veloppeur d&rsquo;Applications Mobiles | React Native &middot; Android &amp; iOS &middot; REST API</span>
+                    <a href="https://linkedin.com/in/laurent-joël-mkounga-tatchum-76548b291"
+                        target="_blank">linkedin.com/in/laurent-jo&euml;l-mkounga-tatchum</a>
+                    <a href="https://github.com/LaurentJoel" target="_blank">github.com/LaurentJoel</a>
+                    <a href="https://portfolio-joel1.vercel.app" target="_blank">portfolio-joel1.vercel.app</a>
+                </div>
+                <div class="header-right">
+                    Email&nbsp;: <a href="mailto:laurentjoel52@gmail.com">laurentjoel52@gmail.com</a><br>
+                    T&eacute;l&nbsp;: <a href="tel:+237679147059">+237 679 147 059</a><br>
+                    Localisation&nbsp;: Yaound&eacute;, Cameroun<br>
+                    <em>Disponible imm&eacute;diatement &mdash; Travail &agrave; distance</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <hr class="section-divider">
+        <div class="section-title">Profil Professionnel</div>
+        <p style="font-size: 10.5px; text-align: justify; margin-bottom: 4px;">
+            D&eacute;veloppeur d&rsquo;applications mobiles avec <strong>+3 ans d&rsquo;exp&eacute;rience</strong> dans la conception, le d&eacute;veloppement et le d&eacute;ploiement d&rsquo;applications <strong>Android et iOS</strong> avec <strong>React Native</strong> (Expo &amp; CLI).
+            Exp&eacute;rience concr&egrave;te en gestion du cycle de vie complet d&rsquo;une application mobile&nbsp;: de la transposition de maquettes UI en code, &agrave; l&rsquo;int&eacute;gration d&rsquo;<strong>APIs REST</strong>, la mise en &oelig;uvre de mesures de <strong>s&eacute;curit&eacute;</strong>, jusqu&rsquo;au d&eacute;ploiement sur <strong>Google Play Console</strong> et <strong>App Store Connect</strong>.
+            Ma&icirc;trise parfaite de <strong>Git/GitHub</strong> pour la collaboration et le versioning. Autonome, transparent dans ma communication, et habitu&eacute; au travail en &eacute;quipe &agrave; distance.
+        </p>
+
+        <!-- TECHNICAL SKILLS -->
+        <hr class="section-divider">
+        <div class="section-title">Comp&eacute;tences Techniques</div>
+
+        <ul class="skills-list">
+            <li><strong>Mobile (principal)&nbsp;:</strong> React Native (Expo &amp; CLI), Android &amp; iOS, Flutter/Dart, Publication Play Store &amp; App Store</li>
+            <li><strong>Int&eacute;gration UI&nbsp;:</strong> Transposition de maquettes (Figma) en composants React Native, Animations, Design Responsive, UX mobile</li>
+            <li><strong>APIs &amp; Backend&nbsp;:</strong> Int&eacute;gration d&rsquo;APIs RESTful, Node.js (Express, Nest.js), Authentification JWT, Gestion des erreurs</li>
+            <li><strong>S&eacute;curit&eacute;&nbsp;:</strong> Authentification JWT, Stockage s&eacute;curis&eacute;, Chiffrement des donn&eacute;es, Validation des entr&eacute;es, HTTPS</li>
+            <li><strong>Bases de donn&eacute;es&nbsp;:</strong> Firebase (Firestore, Auth, Storage), PostgreSQL, MongoDB, SQLite, Redis</li>
+            <li><strong>Git &amp; Versioning&nbsp;:</strong> Git, GitHub (GitFlow, branches, pull requests, code reviews, gestion des versions)</li>
+            <li><strong>D&eacute;ploiement&nbsp;:</strong> Google Play Console, App Store Connect, CI/CD (GitHub Actions), Docker, Gestion des releases</li>
+            <li><strong>Frontend Web&nbsp;:</strong> React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3</li>
+            <li><strong>M&eacute;thodologies&nbsp;:</strong> Agile/SCRUM, Travail &agrave; distance, Documentation technique, Communication transparente</li>
+        </ul>
+
+        <!-- WORK EXPERIENCE -->
+        <hr class="section-divider">
+        <div class="section-title">Exp&eacute;rience Professionnelle</div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <div class="exp-title">D&eacute;veloppeur Full-Stack (Web &amp; Mobile) | CENADI &mdash; Centre National de D&eacute;veloppement de l&rsquo;Informatique</div>
+                <div class="exp-date">Juin 2025 &ndash; Pr&eacute;sent</div>
+            </div>
+            <div class="exp-subtitle">Institution gouvernementale &mdash; Yaound&eacute;, Cameroun</div>
+            <ul class="exp-list">
+                <li><strong>D&eacute;veloppement mobile end-to-end&nbsp;:</strong> Conception, d&eacute;veloppement et d&eacute;ploiement d&rsquo;applications <strong>React Native</strong> (Android &amp; iOS) du prototype &agrave; la publication sur le <strong>Play Store</strong>.</li>
+                <li><strong>Transposition de maquettes UI&nbsp;:</strong> Transformation de designs et maquettes d&rsquo;interface en composants React Native pixel-perfect, avec animations et gestion de la navigation.</li>
+                <li><strong>Int&eacute;gration d&rsquo;APIs REST&nbsp;:</strong> Connexion des applications mobiles aux APIs backend (Node.js/Express), gestion des &eacute;tats de chargement, erreurs et cache.</li>
+                <li><strong>S&eacute;curit&eacute; applicative&nbsp;:</strong> Impl&eacute;mentation de l&rsquo;authentification JWT, stockage s&eacute;curis&eacute; des tokens, validation des entr&eacute;es et communication HTTPS.</li>
+                <li><strong>Gestion de versions&nbsp;:</strong> Utilisation quotidienne de Git/GitHub avec GitFlow, pull requests, code reviews et gestion des branches de release.</li>
+                <li><strong>Collaboration&nbsp;:</strong> Travail en &eacute;quipe pluridisciplinaire (designers, backend, m&eacute;tier), communication transparente et livraisons dans les d&eacute;lais.</li>
+                <li><strong>Backend &amp; APIs&nbsp;:</strong> D&eacute;veloppement d&rsquo;APIs RESTful avec Node.js/Express/TypeScript et gestion de bases de donn&eacute;es PostgreSQL/MongoDB en production.</li>
+            </ul>
+        </div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <div class="exp-title">D&eacute;veloppeur Stagiaire Interm&eacute;diaire | CENADI</div>
+                <div class="exp-date">Juin 2024 &ndash; Ao&ucirc;t 2024</div>
+            </div>
+            <ul class="exp-list">
+                <li>D&eacute;veloppement de composants front-end (React/React Native) et de fonctionnalit&eacute;s back-end (Node.js/Express).</li>
+                <li>Int&eacute;gration d&rsquo;APIs tierces et optimisation de requ&ecirc;tes PostgreSQL/MongoDB.</li>
+                <li>Participation au recueil des besoins et tests de validation des fonctionnalit&eacute;s mobiles.</li>
+            </ul>
+        </div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <div class="exp-title">D&eacute;veloppeur Junior Stagiaire | Octal Groupe</div>
+                <div class="exp-date">Juin 2023 &ndash; Ao&ucirc;t 2023</div>
+            </div>
+            <ul class="exp-list">
+                <li>D&eacute;veloppement d&rsquo;applications web et mobile pour des clients en environnement de consulting.</li>
+                <li>Adoption de Git, code reviews et m&eacute;thodologie Agile/SCRUM.</li>
+            </ul>
+        </div>
+
+        <!-- KEY PROJECTS -->
+        <hr class="section-divider">
+        <div class="section-title">Projets Mobiles Cl&eacute;s <span
+                style="font-weight: 400; font-size: 9.5px; text-transform: none; letter-spacing: 0;">&mdash; Plus sur
+                <a href="https://portfolio-joel1.vercel.app" target="_blank"
+                    style="color: #000; text-decoration: underline;">mon portfolio</a></span></div>
+
+        <div class="proj-entry">
+            <div class="proj-header">
+                <div class="proj-title">Smart Farmer &mdash; Application Mobile avec IA (React Native) | <a
+                        href="https://github.com/LaurentJoel/YCDPlantApp" target="_blank">CODE</a></div>
+                <div class="proj-date">2024 &ndash; 2025</div>
+            </div>
+            <ul class="proj-list">
+                <li>Application mobile compl&egrave;te <strong>React Native</strong> + API REST Node.js/Express, d&eacute;velopp&eacute;e de A &agrave; Z et <strong>publi&eacute;e sur le Play Store</strong>.</li>
+                <li>Int&eacute;gration d&rsquo;API REST, authentification JWT, stockage hybride Firebase/PostgreSQL, synchronisation temps r&eacute;el.</li>
+                <li>Transposition de maquettes UI en &eacute;crans mobiles pixel-perfect avec navigation et animations fluides.</li>
+                <li>Mesures de s&eacute;curit&eacute;&nbsp;: chiffrement, stockage s&eacute;curis&eacute; des tokens, validation des entr&eacute;es.</li>
+            </ul>
+        </div>
+
+        <div class="proj-entry">
+            <div class="proj-header">
+                <div class="proj-title">Plateforme Institutionnelle CENADI &mdash; Web + API | <a
+                        href="https://www.cenadi.cm/en/home" target="_blank">LIEN</a></div>
+                <div class="proj-date">2025</div>
+            </div>
+            <ul class="proj-list">
+                <li>Application full-stack en production&nbsp;: React/TypeScript (front) + Node.js/Express (back) + PostgreSQL.</li>
+                <li>APIs RESTful consomm&eacute;es par les clients mobile et web, d&eacute;ploy&eacute;es via Docker et CI/CD.</li>
+            </ul>
+        </div>
+
+        <div class="proj-entry">
+            <div class="proj-header">
+                <div class="proj-title">Syst&egrave;me de Gestion Universitaire &mdash; Web Full-Stack | <a
+                        href="https://github.com/LaurentJoel/ProjetCompletNiveau3" target="_blank">CODE</a></div>
+                <div class="proj-date">2024</div>
+            </div>
+            <ul class="proj-list">
+                <li>React + Node.js/Express + PostgreSQL avec contr&ocirc;le d&rsquo;acc&egrave;s par r&ocirc;le et APIs RESTful.</li>
+                <li>D&eacute;ploiement Docker, documentation technique compl&egrave;te et pratiques de code propre.</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <hr class="section-divider">
+        <div class="section-title">Formation</div>
+
+        <div class="edu-entry">
+            <div class="edu-left">
+                <div class="edu-school">Universit&eacute; Saint Jean-Paul II, Yaound&eacute;</div>
+                <div class="edu-detail">Licence en Informatique / G&eacute;nie Logiciel</div>
+            </div>
+            <div class="edu-right">
+                <div class="edu-location">Yaound&eacute;, Cameroun</div>
+                <div class="edu-date">Juin 2022 &ndash; Juin 2025</div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <hr class="section-divider">
+        <div class="section-title">Certifications</div>
+        <ul class="skills-list">
+            <li><strong>Generative AI for Everyone</strong> &mdash; DeepLearning.AI | <a
+                    href="https://learn.deeplearning.ai/certificates/4ec72627-00f4-40ea-bd40-17db8412c376?usp=sharing"
+                    target="_blank">Certificat</a> | F&eacute;v. 2026</li>
+            <li><strong>Agentic AI</strong> &mdash; DeepLearning.AI | <a
+                    href="https://learn.deeplearning.ai/certificates/6299e2ca-21c6-4a3c-b22c-72dab5e45dfc?usp=sharing"
+                    target="_blank">Certificat</a> | F&eacute;v. 2026</li>
+            <li><strong>Pair Programming with a Large Language Model</strong> &mdash; Google / DeepLearning.AI | <a
+                    href="https://learn.deeplearning.ai/accomplishments/8794fb9b-23b7-4b93-b74b-2478c736cb3c?usp=sharing"
+                    target="_blank">Certificat</a> | F&eacute;v. 2026</li>
+        </ul>
+
+        <!-- LANGUAGES -->
+        <hr class="section-divider">
+        <div class="section-title">Langues</div>
+        <ul class="skills-list" style="display: flex; list-style: none; justify-content: center; gap: 40px;">
+            <li><strong>Fran&ccedil;ais&nbsp;:</strong> Natif / Courant</li>
+            <li><strong>Anglais&nbsp;:</strong> Courant (bilingue)</li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
